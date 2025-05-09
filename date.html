@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Date</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding: 5px;
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <span id="date"></span>
+
+  <script>
+    const dateElement = document.getElementById("date");
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    dateElement.textContent = today.toLocaleDateString('en-IN', options);
+  </script>
+</body>
+</html>
